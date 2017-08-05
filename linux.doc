@@ -123,3 +123,5 @@ History 5 最近5个
     应用层(application)->表示层(presention)->会话层(session)->传输层(transport)->网络层(ip)->数据链路层(link)->物理层(physical)
     四层网络：
     应用层(application:smtp,ftp,telnet)->传输层(transport)->网络层(ip)->链路层(link,与硬件驱动对话)
+ 50)查看路由
+    tracert www.baidu.com（查看百度走了那些路由）
