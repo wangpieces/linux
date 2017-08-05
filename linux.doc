@@ -1,11 +1,11 @@
 Linux学习笔记
 一、	linux命令
 1)	立刻关机
-Shutdown –h now
+    Shutdown –h now
 2)	重启
-Shutdown –r now 或者  Reboot
+    Shutdown –r now 或者  Reboot
 3)	注销
-Logout
+    Logout
 4)	Vi编辑器使用步骤
     ①	Vi hello.jav(进入hello.java，如果hello.java不存在则新建)
     ②	输入i进入编辑模式
@@ -15,17 +15,17 @@ Logout
     ⑥	编译hello.java(javac hello.java)
     ⑦	运行hello.java(java hello)
 5)	显示当前在那个目录下
-Pwd
+    Pwd
 6)	添加用户
-Useradd 用户名(useradd xushaowang 添加了xushaowang这个用户)
+    Useradd 用户名(useradd xushaowang 添加了xushaowang这个用户)
 7)	删除用户
-Userdel 用户名(userdel xushaowang 删除xushaowang这个用户)
+    Userdel 用户名(userdel xushaowang 删除xushaowang这个用户)
 8)	删除用户及用户目录
-Userdel  -r 用户名(userdel –r xushaowang 删除xushaowang以及所在的主目录)
+    Userdel  -r 用户名(userdel –r xushaowang 删除xushaowang以及所在的主目录)
 9)	修改当前用户密码
-Passwd 密码
+    Passwd 密码
 10)	修改指定用户密码
-Passwd xushaowang
+    Passwd xushaowang
 11)	运行级别(0-6)，在/etc/inittab的id:5initdefault这一行中修改
     ①	0:关机
     ②	1:单用户
@@ -35,61 +35,61 @@ Passwd xushaowang
     ⑥	5:图形界面
     ⑦	6:系统重启
 12)	显示对应文件夹下非掩藏文件
-Ls 
+    Ls 
 13)	以列表的形式显示非掩藏文件
-Ls -l
+    Ls -l
 14)	显示掩藏文件
-Ls -a
+    Ls -a
 15)	以列表的形式显示掩藏文件
-Ls -la
+    Ls -la
 16)	建立目录（文件夹）
-Mkdir
+    Mkdir
 17)	删除目录
-Rmdir
+    Rmdir
 18)	建立文件（非文件夹）
-Touch 文件名称.后缀 touch test.txt
+    Touch 文件名称.后缀 touch test.txt
 19)	删除文件
-Rm test.txt
+    Rm test.txt
 20)	删除所有内容，包括文件夹以及该文件夹下所有文件(r:递归，f:强制)
-Rm –rf 文件夹名称
+    Rm –rf 文件夹名称
 21)	复制(将dir1或者file.txt复制到dir2,dir2必须为文件夹)
-Cp –r dir1/file.txt dir2
+    Cp –r dir1/file.txt dir2
 22)	移动文件(将dir1或者file.txt移动到dir2,dir2必须为文件夹)
-Mv dir1/file.txt dir2
+    Mv dir1/file.txt dir2
 23)	修改文件名(将t1.txt修改为t2.txt)
-Mv t1.txt t2.txt 
+    Mv t1.txt t2.txt 
 24)	显示文件内容带分页（空格下一页，ctrl+pgup上一页）
-Ls –l|more 分页查看所有文件列表
-More test.txt 分页查看文件里面的内容 
+    Ls –l|more 分页查看所有文件列表
+    More test.txt 分页查看文件里面的内容 
 25)	显示文件内容带分页
-Less test.txt
+    Less test.txt
 26)	在文本中查找内容
-Grep “关键字” 文件名 （展示结果不带行数）
-Grep –n “关键字” 文件名（展示结果带行数）
+    Grep “关键字” 文件名 （展示结果不带行数）
+    Grep –n “关键字” 文件名（展示结果带行数）
 27)	管道符 |
 28)	帮助命令（相当于window下的help）
-Man 命令名称
+    Man 命令名称
 29)	搜索文件（从指定目录下开始查找文件名为t.txt的文件，/表示根目录）
-Find / -name t.txt
+    Find / -name t.txt
 30)	管道重定向命令
-Ls –l > a.txt 将显示列表保存到a.txt中，文件不存在则新建，且是覆盖保存
-Ls –l >>a.txt 追加写
+    Ls –l > a.txt 将显示列表保存到a.txt中，文件不存在则新建，且是覆盖保存
+    Ls –l >>a.txt 追加写
 31)	查看文件信息（cat只看，vi可以编辑）
-Cat/vi 文件名
+    Cat/vi 文件名
 32)	添加组
-Groupadd 组名
+    Groupadd 组名
 33)	查看所有的组信息
-Cat /etc/group
+    Cat /etc/group
 34)	查看文件所在组
-Ls -ahl
+    Ls -ahl
 35)	修改文件所在的组
-Chgrp 组名 文件名（chgrp g1 f1,将文件f1所在的组改为g1）
+    Chgrp 组名 文件名（chgrp g1 f1,将文件f1所在的组改为g1）
 36)	创建用户，并同时将该用户分配到对应的组
-Useradd –g 组名 新用户名
+    Useradd –g 组名 新用户名
 37)	查看所有用户信息
-Cat/vi /etc/passwd
+    Cat/vi /etc/passwd
 38)	文件权限
-权限：r:可读->4 w:可写->2 x:可执行->1
+    权限：r:可读->4 w:可写->2 x:可执行->1
     文件类型：-:表示文件 d:表示目录 l:表示链接
         ①|  ②  |  ③  |  ④
     -| rw- | rw- | r-- 
@@ -99,29 +99,37 @@ Cat/vi /etc/passwd
     ③	文件所在组对该文件的权限
     ④	其他组的用户对该文件的权限
 39)	修改对应用户名下文件访问权限
-Chmod 777(所有权限相加的值) 文件名
+    Chmod 777(所有权限相加的值) 文件名
 40)	修改某个用户所在的组
-Usermod –g 组名 用户名（usermod –g g1 xushaowang）
+    Usermod –g 组名 用户名（usermod –g g1 xushaowang）
 41)	修改文件所有者
-Chown 用户名 文件名(chown xushaowang fl.txt)
+    Chown 用户名 文件名(chown xushaowang fl.txt)
 42)	查看磁盘使用情况
-Fdisk –l
+    Fdisk –l
 43)	查看磁盘使用情况
-Df –h/l
+    Df –h/l
 44)	查看某个目录在哪个分区
-Df 目录全路径
+    Df 目录全路径
 45)	查找指定大小文件
-Find –size +10000000k
+    Find –size +10000000k
 46)	查看环境变量
-Env
+    Env
 47)	查看使用过的命令
-History 5 最近5个 
-!5执行编号为5的命令
+    History 5 最近5个 
+    !5执行编号为5的命令
 48)	字母+tab提示对应开头的命令
 49)	网络
     七层网络：
     应用层(application)->表示层(presention)->会话层(session)->传输层(transport)->网络层(ip)->数据链路层(link)->物理层(physical)
     四层网络：
     应用层(application:smtp,ftp,telnet)->传输层(transport)->网络层(ip)->链路层(link,与硬件驱动对话)
- 50)查看路由
-    tracert www.baidu.com（查看百度走了那些路由）
+50)跟踪路由
+    tracert ip/域名   tracert www.baidu.com（查看百度走了那些路由）
+51)linux查看ip
+    ifconfig
+52）linux下网络配置
+    方法一：red hat有效，centos无效，可能要安装图形界面
+    1)root身份进入，使用setup命令进入
+    2)执行：etc/rc.d/init.d/network restart 生效
+    
+    
