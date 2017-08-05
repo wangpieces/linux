@@ -136,7 +136,7 @@ Linux学习笔记
     1)ifconfig eth0 ip 对网卡进行设置
     2)ifconfig eth0 network ip 对子网掩码进行设置
     
-    方法三：修改对应的文件
+    方法三：修改对应的文件配置文件（goole自行查找）
  
  
  
