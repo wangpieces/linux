@@ -127,9 +127,16 @@ Linux学习笔记
     tracert ip/域名   tracert www.baidu.com（查看百度走了那些路由）
 51)linux查看ip
     ifconfig
-52）linux下网络配置
-    方法一：red hat有效，centos无效，可能要安装图形界面
+52）linux下网络配置（red hat有效，centos无效，可能要安装图形界面）
+    方法一：
     1)root身份进入，使用setup命令进入
     2)执行：etc/rc.d/init.d/network restart 生效
     
+    方法二：临时生效，关机重启后失效
+    1)ifconfig eth0 ip 对网卡进行设置
+    2)ifconfig eth0 network ip 对子网掩码进行设置
     
+    方法三：修改对应的文件
+ 
+ 
+ 
