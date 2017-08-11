@@ -137,6 +137,17 @@ Linux学习笔记
     2)ifconfig eth0 network ip 对子网掩码进行设置
     
     方法三：修改对应的文件配置文件（goole自行查找）
+    
+  53)CentOS7设置上网
+     1.在网络适配器中设置为桥接模式
+     2.将ect/sysconfig/network-scripts/ifcfg-ens33(ens33会不一样)文件中ONBOOT=no改为ONBOOT=yes
+       （做这两歩操作后就可以上网了，和你的主机也就通了，但是这是自动获取IP的，如果要设置固定IP可以参考3下面的步骤）
+     3.进入刚才的文件夹继续修改，在该文件中新增如下数据：
+       首先输入ip add 或者ifconfig 看到对应的网络信息，
+       1) IPADDRO=192.168.0.123 （ip地址）
+       2) PREFIXO=24 (通过ip add可以看到如下信息：Inet 192.168.0.112/24，则PREFIXO就是斜杆后的这个值了 )
+       3) GATEWAYO=192.168.0.1 （网关）
+       4) DNS1=192.168.0.1 （DNS）
  
  
  
